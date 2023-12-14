@@ -1,0 +1,26 @@
+{
+  "name": "cypress-jenkins",
+  "version": "1.0.0",
+  "description": "Test repository to run Jenkins pipelines",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NancyAymard/cypress-jenkins.git"
+  },
+  "keywords": [
+    "cypress",
+    "jenkins"
+  ],
+  "author": "Nancy Aymard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NancyAymard/cypress-jenkins/issues"
+  },
+  "homepage": "https://github.com/NancyAymard/cypress-jenkins#readme",
+  "dependencies": {
+    "cypress": "^13.6.1"
+  }
+}
