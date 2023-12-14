@@ -1,4 +1,4 @@
-describe("Run Jenkins pipeline", () => {
+describe("Run tests in the Jenkins pipeline", () => {
   it("Passed test", () => {
     cy.visit("https://example.cypress.io");
   });
