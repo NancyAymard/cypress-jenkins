@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Install dependencies') {
+            steps {
+                bat 'npm ci'
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                script {
+                    try {
+                        bat 'npm run test'
+                    }catch (Exception e){
+                        echo "Error when trying to run tests"
+                    }
+                }
+            }
+        }
+        stage('Generate console report and Txt') {
+            steps {
+                bat 'npm run generateTxt'
+            }
+        }
+    }
+}
