@@ -8,8 +8,6 @@ module.exports = defineConfig({
     reportTitle: "Cypress with Jenkins pipelines",
     reportFilename: "my_report",
     reportDir: "reports",
-    html: true,
-    json: true,
   },
   e2e: {
     setupNodeEvents(on, config) {
