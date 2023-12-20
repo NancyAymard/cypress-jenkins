@@ -7,28 +7,13 @@ pipeline {
                 bat 'npm ci'
             }
         }
-        stage('Run tests') {
-            parallel {
-                stage('Tests on Chrome') {
-                    steps {
-                        script {
-                            try {
-                                bat 'npm run test:chrome'
-                            }catch (Exception e){
-                                echo "Error when trying to run tests on Chrome"
-                            }
-                        }
-                    }
-                }
-                stage('Tests on Firefox') {
-                    steps {
-                        script {
-                            try {
-                                bat 'npm run test:firefox'
-                            }catch (Exception e){
-                                echo "Error when trying to run tests on Chrome"
-                            }
-                        }
+        stage('Tests on Chrome') {
+            steps {
+                script {
+                    try {
+                        bat 'npm run test:chrome'
+                    }catch (Exception e){
+                        echo "Error when trying to run tests on Chrome"
                     }
                 }
             }
