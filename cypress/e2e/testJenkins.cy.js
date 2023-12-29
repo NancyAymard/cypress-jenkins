@@ -1,9 +1,9 @@
-describe("Run tests in the Jenkins pipeline", () => {
+describe("Run tests in the Jenkins pipeline", { tags: "@regression" }, () => {
   it("Passed test", () => {
     cy.visit("https://example.cypress.io");
   });
 
-  it("Failed test", () => {
+  it("Failed test", { tags: ["@first", "@pass"] }, () => {
     cy.visit("https://example.cypress.io");
     cy.get("h1").should("contain", "Hello World!");
   });

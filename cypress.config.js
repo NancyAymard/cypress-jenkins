@@ -9,9 +9,14 @@ module.exports = defineConfig({
     reportFilename: "my_report",
     reportDir: "reports",
   },
+  env: {
+    grepFilterSpecs: true,
+  },
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      require("@cypress/grep/src/plugin")(config);
+      return config;
     },
   },
 });
