@@ -1,0 +1,33 @@
+parameters:
+  - name: image
+    displayName: Pool image
+    type: string
+    default: ubuntu-latest
+    values:
+      - windows-latest
+      - ubuntu-latest
+      - macOS-latest
+
+trigger:
+  - none
+
+variables:
+  - name: vmImage
+    value: ${{parameters.image}}
+
+jobs:
+  - job: InstallNode
+    displayName: "Install Node.js"
+    pool:
+      vmImage: $(vmImage)
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: 18.16.0
+
+  - job: RunNpmCi
+    displayName: "Run npm ci"
+    dependsOn: InstallNode
+    steps:
+      - script: npm ci
+          npx cypress run --e2e --browser chrome
