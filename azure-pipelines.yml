@@ -9,13 +9,18 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '18.16'
+jobs:
+- job: InstallNode
   displayName: 'Install Node.js'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: 18.16.0
 
-- script: |
-    npm ci
-    npx cypress run --e2e --browser chrome
-  displayName: 'npm install and build'
+- job: RunNpmCi
+  displayName: 'Run npm ci'
+  dependsOn: InstallNode
+  steps:
+  - script: 
+      npm ci
+      npx cypress run --e2e --browser chrome
