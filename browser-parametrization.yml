@@ -7,8 +7,8 @@ parameters:
       - windows-latest
       - ubuntu-latest
       - macOS-latest
-  - name: navegador
-    displayName: Navegadores
+  - name: browser
+    displayName: Browsers
     type: string
     default: chrome
     values:
@@ -16,10 +16,6 @@ parameters:
       - firefox
       - edge
       - electron
-  - name: tags
-    displayName: tags
-    type: string
-    default: "@regresion"
 
 trigger:
   - none
@@ -40,4 +36,4 @@ jobs:
     steps:
       - script: |
           npm ci
-          npx cypress run --e2e --browser ${{ parameters.navegador }}
+          npx cypress run --e2e --browser ${{ parameters.browser }}
