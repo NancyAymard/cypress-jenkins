@@ -16,6 +16,10 @@ parameters:
       - firefox
       - edge
       - electron
+  - name: tags
+    displayName: tags
+    type: string
+    default: "@regresion"
 
 trigger:
   - none
@@ -36,4 +40,4 @@ jobs:
     steps:
       - script: |
           npm ci
-          npx cypress run --e2e --browser ${{ parameters.browser }}
+          npx cypress run --e2e --browser ${{ parameters.browser }} --env grepTags=${{ parameters.tags }}
