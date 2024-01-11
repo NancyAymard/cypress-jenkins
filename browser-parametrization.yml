@@ -7,27 +7,37 @@ parameters:
       - windows-latest
       - ubuntu-latest
       - macOS-latest
+  - name: navegador
+    displayName: Navegadores
+    type: string
+    default: chrome
+    values:
+      - chrome
+      - firefox
+      - edge
+      - electron
+  - name: tags
+    displayName: tags
+    type: string
+    default: "@regresion"
 
 trigger:
   - none
-
-variables:
-  - name: vmImage
-    value: ${{parameters.image}}
 
 jobs:
   - job: InstallNode
     displayName: "Install Node.js"
     pool:
-      vmImage: $(vmImage)
+      vmImage: ${{ parameters.image }}
     steps:
       - task: NodeTool@0
         inputs:
-          versionSpec: 18.16.0
+          versionSpec: "18.16.0"
 
   - job: RunNpmCi
-    displayName: "Run npm ci"
+    displayName: "npm ci"
     dependsOn: InstallNode
     steps:
-      - script: npm ci
-          npx cypress run --e2e --browser chrome
+      - script: |
+          npm ci
+          npx cypress run --e2e --browser ${{ parameters.navegador }}
