@@ -1,0 +1,19 @@
+name: schedule
+
+on:
+  schedule:
+  - cron: '0 12 * * *'
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: run tests
+        run: npx cypress run --e2e --browser chrome
