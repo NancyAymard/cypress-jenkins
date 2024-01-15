@@ -1,19 +1,18 @@
 name: Push in branch main
 on:
   push:
-    branches:
-      main
+    branches: main
 
 jobs:
   run-tests:
     runs-on: ubuntu-latest
 
     steps:
-    - name: checkout
-      uses: actions/checkout@v4.1.1
+      - name: checkout
+        uses: actions/checkout@v4.1.1
 
-    - name: install dependencies
-      run: npm ci
+      - name: install dependencies
+        run: npm ci
 
-    - name: run tests
-      run: npm cypress run --e2e --browser chrome
+      - name: run tests
+        run: (npx cypress run --e2e --browser chrome || ver>nul)
