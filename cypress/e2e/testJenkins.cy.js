@@ -1,5 +1,5 @@
 describe("Run tests in the Jenkins pipeline", { tags: "@regression" }, () => {
-  it("Passed test", () => {
+  it.only("Passed test", () => {
     cy.visit("https://example.cypress.io");
   });
 
