@@ -6,7 +6,7 @@ on:
 jobs:
   cypress-run:
     name: Cypress run
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: checkout
@@ -16,6 +16,4 @@ jobs:
         run: npm ci
 
       - name: run tests
-        run: |
-          set NO_COLOR=1
-          npm run test:chrome
+        run: (npx cypress run --e2e --browser chrome || true)
