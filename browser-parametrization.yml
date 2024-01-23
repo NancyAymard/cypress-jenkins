@@ -40,4 +40,5 @@ jobs:
     steps:
       - script: |
           npm ci
+          set NO_COLOR=1
           npx cypress run --e2e --browser ${{ parameters.browser }} --env grepTags=${{ parameters.tags }}
