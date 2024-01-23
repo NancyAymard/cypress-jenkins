@@ -4,7 +4,7 @@
   "description": "Test repository to run Jenkins pipelines",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "(npx cypress run --e2e --browser chrome || ver>nul)",
+    "test:chrome": "(npx cypress run --e2e --browser chrome || ver>nul) && (npm run generateTxt)",
     "test:firefox": "(npx cypress run --e2e --browser firefox || ver>nul)",
     "generateTxt": "node generateConsoleReport.js"
   },
