@@ -16,4 +16,4 @@ jobs:
         run: npm ci
 
       - name: run tests
-        run: (npx cypress run --e2e --browser chrome || true)
+        run: (npx cypress run --e2e --browser chrome || true) && (npm run generateTxt)
