@@ -1,0 +1,25 @@
+name: Create Cypress report
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  cypress-e2e-chrome81:
+    name: ubuntu-latest
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: run tests
+        run: npx cypress run --e2e --browser chrome
+        continue-on-error: true
+
+      - name: Deploy report page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./public
