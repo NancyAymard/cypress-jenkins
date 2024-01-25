@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 1,
+    "failures": 1,
+    "start": "2024-01-25T13:16:55.649Z",
+    "end": "2024-01-25T13:17:02.003Z",
+    "duration": 6354,
+    "testsRegistered": 3,
+    "passPercent": 50,
+    "pendingPercent": 33.33333333333333,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3224a4eb-b0a8-4386-9550-65c1435a70f9",
+      "title": "",
+      "fullFile": "cypress/e2e/testJenkins.cy.js",
+      "file": "cypress/e2e/testJenkins.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bb858ac6-25ad-4a7e-897c-b036e0539b77",
+          "title": "Run tests in the Jenkins pipeline",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Passed test",
+              "fullTitle": "Run tests in the Jenkins pipeline Passed test",
+              "timedOut": null,
+              "duration": 280,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://example.cypress.io\");",
+              "err": {},
+              "uuid": "b700c1bc-f4e6-49cd-93fe-565607707625",
+              "parentUUID": "bb858ac6-25ad-4a7e-897c-b036e0539b77",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Failed test",
+              "fullTitle": "Run tests in the Jenkins pipeline Failed test",
+              "timedOut": null,
+              "duration": 4273,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://example.cypress.io\");\ncy.get(\"h1\").should(\"contain\", \"Hello World!\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<h1>' to contain 'Hello World!'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h1>' to contain 'Hello World!'\n    at Context.eval (webpack://cypress-jenkins/./cypress/e2e/testJenkins.cy.js:8:17)",
+                "diff": null
+              },
+              "uuid": "07c010eb-aee9-4d9b-ab63-86d1cd6a2d56",
+              "parentUUID": "bb858ac6-25ad-4a7e-897c-b036e0539b77",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Skipped test",
+              "fullTitle": "Run tests in the Jenkins pipeline Skipped test",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit(\"https://example.cypress.io\");",
+              "err": {},
+              "uuid": "3da6c998-1649-45ea-8725-992ea29f8177",
+              "parentUUID": "bb858ac6-25ad-4a7e-897c-b036e0539b77",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b700c1bc-f4e6-49cd-93fe-565607707625"
+          ],
+          "failures": [
+            "07c010eb-aee9-4d9b-ab63-86d1cd6a2d56"
+          ],
+          "pending": [
+            "3da6c998-1649-45ea-8725-992ea29f8177"
+          ],
+          "skipped": [],
+          "duration": 4553,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "index",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportTitle": "Cypress with Jenkins pipelines",
+        "reportFilename": "index",
+        "reportDir": "docs"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
