@@ -6,7 +6,7 @@ module.exports = defineConfig({
   reporterOptions: {
     charts: true,
     reportTitle: "Cypress with Jenkins pipelines",
-    reportFilename: "my_report",
+    reportFilename: "index",
     reportDir: "docs",
   },
   env: {
