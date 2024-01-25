@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 1,
     "failures": 1,
-    "start": "2024-01-25T13:39:25.972Z",
-    "end": "2024-01-25T13:39:32.342Z",
-    "duration": 6370,
+    "start": "2024-01-25T13:58:23.305Z",
+    "end": "2024-01-25T13:58:29.837Z",
+    "duration": 6532,
     "testsRegistered": 3,
     "passPercent": 50,
     "pendingPercent": 33.33333333333333,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ffa3cfda-37a1-4b79-91e1-1b1b2485fc09",
+      "uuid": "307560fe-7611-4235-b59a-a9c0f58ca9b7",
       "title": "",
       "fullFile": "cypress/e2e/testJenkins.cy.js",
       "file": "cypress/e2e/testJenkins.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "58d7e58e-4f51-4309-86e0-f05c5166a338",
+          "uuid": "d2468027-8b6a-466d-b8c2-8527f335dc5e",
           "title": "Run tests in the Jenkins pipeline",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Passed test",
               "fullTitle": "Run tests in the Jenkins pipeline Passed test",
               "timedOut": null,
-              "duration": 269,
+              "duration": 291,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(\"https://example.cypress.io\");",
               "err": {},
-              "uuid": "279f3f14-f7a8-41c5-a6d2-9e534436c941",
-              "parentUUID": "58d7e58e-4f51-4309-86e0-f05c5166a338",
+              "uuid": "0f426748-b92f-45e7-9413-a1dafe3d07b5",
+              "parentUUID": "d2468027-8b6a-466d-b8c2-8527f335dc5e",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Failed test",
               "fullTitle": "Run tests in the Jenkins pipeline Failed test",
               "timedOut": null,
-              "duration": 4284,
+              "duration": 4322,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,8 +69,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h1>' to contain 'Hello World!'\n    at Context.eval (webpack://cypress-jenkins/./cypress/e2e/testJenkins.cy.js:8:17)",
                 "diff": null
               },
-              "uuid": "28fefe93-95c9-4b38-8d47-3d04aa4ae017",
-              "parentUUID": "58d7e58e-4f51-4309-86e0-f05c5166a338",
+              "uuid": "ae8477c3-bee1-40ca-bb68-8d737f3d1754",
+              "parentUUID": "d2468027-8b6a-466d-b8c2-8527f335dc5e",
               "isHook": false,
               "skipped": false
             },
@@ -87,24 +87,24 @@
               "context": null,
               "code": "cy.visit(\"https://example.cypress.io\");",
               "err": {},
-              "uuid": "341703b5-fe62-450b-babe-01e19be4c3ed",
-              "parentUUID": "58d7e58e-4f51-4309-86e0-f05c5166a338",
+              "uuid": "05948986-1013-44ee-9034-595fb896ccb4",
+              "parentUUID": "d2468027-8b6a-466d-b8c2-8527f335dc5e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "279f3f14-f7a8-41c5-a6d2-9e534436c941"
+            "0f426748-b92f-45e7-9413-a1dafe3d07b5"
           ],
           "failures": [
-            "28fefe93-95c9-4b38-8d47-3d04aa4ae017"
+            "ae8477c3-bee1-40ca-bb68-8d737f3d1754"
           ],
           "pending": [
-            "341703b5-fe62-450b-babe-01e19be4c3ed"
+            "05948986-1013-44ee-9034-595fb896ccb4"
           ],
           "skipped": [],
-          "duration": 4553,
+          "duration": 4613,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
